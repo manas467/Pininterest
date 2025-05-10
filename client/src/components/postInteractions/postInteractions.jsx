@@ -24,7 +24,7 @@ export const PostInteractions = ({postId}) => {
   const{isPending,error,data}=useQuery({
     queryKey:['interactionCheck',postId],
     queryFn:()=>
-      apiRequest.post(`/pins/interaction-check/${postId}`)
+      apiRequest.get(`/pins/interaction-check/${postId}`)
       .then((res)=>res.data)
     }
   )
