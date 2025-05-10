@@ -4,7 +4,7 @@ import Image from '../Image/Image'
 import EmojiPicker from 'emoji-picker-react'
 import {useQuery, useQueryClient} from '@tanstack/react-query'
 import apiRequest from '../../utilis/apiRequest';
-import Comment from './comment'
+import Comment from './Comment'
 import { useMutation } from '@tanstack/react-query'
 
 const Comments = ({id}) => {
