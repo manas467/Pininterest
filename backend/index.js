@@ -13,7 +13,13 @@ dotenv.config(); // Loads .env variables
 
 const app=express()
 
-app.use(cors({origin:process.env.CLIENT_URL ,credentials:true}))
+app.use(cors({
+  origin: [
+    process.env.CLIENT_URL, // Local dev
+    "https://pininterest-*.vercel.app" // Production
+  ],
+  credentials: true
+}));
 
 app.use(express.json())
 app.use(cookieParser())
